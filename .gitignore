@@ -96,7 +96,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-#.env
+.env
 .venv
 env/
 venv/
@@ -150,4 +150,4 @@ Desktop.ini
 *.sl3
 *.db-journal
 *.sqlite-journal 
-#.env
+
