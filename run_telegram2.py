@@ -7,7 +7,7 @@ def send_test_message():
     load_dotenv()
     token = os.getenv('TELEGRAM_TOKEN')
     channel_id = os.getenv('TELEGRAM_CHANNEL_ID')
-     print(f'token: {token}, channel_id: {channel_id}')
+    print(f'token: {token}, channel_id: {channel_id}')
     if not token or not channel_id:
         print('TELEGRAM_TOKEN или TELEGRAM_CHANNEL_ID не заданы в .env')
         return
