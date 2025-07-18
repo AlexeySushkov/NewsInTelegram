@@ -1,0 +1,85 @@
+<mxfile host="Electron" modified="2025-07-18T09:06:36.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="TV6N_iMNY1Uy3zS0EyGf" version="22.1.21" type="device">
+  <diagram name="Page-1" id="Gbn4Q-iQUy5RwvEUi0NN">
+    <mxGraphModel dx="1434" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-1" value="Telegram Channel" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-2" value="LLM&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-3" value="Tech Crunch&lt;br&gt;https://techcrunch.com/" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="450" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-6" target="QlGuCvxDqjbiMvp1XiGO-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-25" value="Передаем все &lt;br&gt;во внешнюю LLM&lt;br&gt;получаем top 5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QlGuCvxDqjbiMvp1XiGO-16" vertex="1" connectable="0">
+          <mxGeometry x="0.1243" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-4" target="QlGuCvxDqjbiMvp1XiGO-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-4" value="Telegram Bot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="460" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-5" value="SQLight" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="420" y="410" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-6" target="QlGuCvxDqjbiMvp1XiGO-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-23" value="получаем новости&lt;br&gt;&amp;nbsp;по фильтру" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QlGuCvxDqjbiMvp1XiGO-19" vertex="1" connectable="0">
+          <mxGeometry y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-6" target="QlGuCvxDqjbiMvp1XiGO-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-24" value="Складываем &lt;br&gt;новые в базу" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QlGuCvxDqjbiMvp1XiGO-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.2966" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-6" value="Python Server" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;strokeColor=default;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=0;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-6" target="QlGuCvxDqjbiMvp1XiGO-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="260" as="sourcePoint" />
+            <mxPoint x="210" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-22" value="Отправляем &lt;br&gt;top5&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QlGuCvxDqjbiMvp1XiGO-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.5294" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-7" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=default;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="80" y="50" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;strokeColor=default;curved=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="80" as="sourcePoint" />
+            <mxPoint x="200" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;curved=0;" parent="1" source="QlGuCvxDqjbiMvp1XiGO-4" target="QlGuCvxDqjbiMvp1XiGO-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QlGuCvxDqjbiMvp1XiGO-29" value="Команда на &lt;br&gt;формирование top5&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QlGuCvxDqjbiMvp1XiGO-28" vertex="1" connectable="0">
+          <mxGeometry x="-0.0496" y="1" relative="1" as="geometry">
+            <mxPoint x="91" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
