@@ -1,16 +1,22 @@
 # NewsInTelegram
 
-**NewsInTelegram** — это простой парсер новостей на Python, который извлекает ссылки с новостных страниц, фильтрует их, получает текстовое содержимое и сохраняет результаты в базу данных SQLite.
+**NewsInTelegram** — это парсер новостей на Python, который извлекает ссылки с новостных страниц, фильтрует их, получает текстовое содержимое и сохраняет результаты в базу данных SQLite. Также поддерживается отправка новостей в Telegram-канал и выбор лучших новостей с помощью LLM через OpenRouter API.
 
 ## Структура проекта
 
 - `extract_links.py` — извлечение всех ссылок (href) с указанной страницы.
 - `filter_links.py` — фильтрация ссылок по подстроке.
 - `get_html.py` — получение текстового содержимого страницы без тегов.
-- `run_db.py` — основной скрипт: инициализация базы, парсинг, фильтрация, сохранение новостей.
+- `run_db.py` — основной скрипт: инициализация базы, парсинг, фильтрация, сохранение новостей, отправка в Telegram.
 - `run_db_delete.py` — удаление файла базы данных `news.db`.
 - `run_extract_links.py` — пример извлечения и фильтрации ссылок, а также получения текста по ссылкам.
 - `test_extract_links.py` — юнит-тест для функции извлечения ссылок.
+- `run_telegram.py` — отправка тестового сообщения в Telegram-канал с отключённой SSL-проверкой (через кастомный httpx-клиент).
+- `run_telegram2.py` — отправка тестового сообщения в Telegram-канал (без кастомного клиента).
+- `run_summary.py` — выбор лучших новостей с помощью LLM через OpenRouter API.
+- `requirements.txt` — список зависимостей проекта.
+- `news.db` — база данных SQLite с новостями.
+- `.env` — переменные окружения для токенов и ключей (создайте вручную).
 
 ## Установка зависимостей
 
@@ -28,17 +34,49 @@ venv\Scripts\activate    # для Windows
 pip install -r requirements.txt
 ```
 
-**requirements.txt** (создайте этот файл, если его нет):
+**requirements.txt:**
 ```
 requests
 beautifulsoup4
+python-telegram-bot
+python-dotenv
 ```
 
 Модуль `sqlite3` входит в стандартную библиотеку Python.
 
+## Переменные окружения
+
+Создайте файл `.env` в корне проекта и добавьте:
+```
+TELEGRAM_TOKEN=ваш_токен_бота
+TELEGRAM_CHANNEL_ID=@your_channel_or_id
+OPENROUTER_API_KEY=ваш_ключ_OpenRouter
+OPENROUTER_MODEL=deepseek-ai/deepseek-llm-67b-chat
+OPENROUTER_API_URL=https://openrouter.ai/api/v1
+```
+
+## Примеры заготовок
+
+### .env (пример)
+```
+TELEGRAM_TOKEN=ваш_токен_бота
+TELEGRAM_CHANNEL_ID=@your_channel_or_id
+OPENROUTER_API_KEY=ваш_ключ_OpenRouter
+OPENROUTER_MODEL=deepseek-ai/deepseek-llm-67b-chat
+OPENROUTER_API_URL=https://openrouter.ai/api/v1
+```
+
+### requirements.txt (пример)
+```
+requests
+beautifulsoup4
+python-telegram-bot
+python-dotenv
+```
+
 ## Использование
 
-### 1. Парсинг и сохранение новостей
+### 1. Парсинг и сохранение новостей + отправка в Telegram
 
 ```bash
 python run_db.py
@@ -62,10 +100,25 @@ python run_extract_links.py
 python test_extract_links.py
 ```
 
+### 5. Отправка тестового сообщения в Telegram
+
+```bash
+python run_telegram.py
+# или
+python run_telegram2.py
+```
+
+### 6. Выбор лучших новостей через LLM (OpenRouter)
+
+```bash
+python run_summary.py --api_key=ВАШ_КЛЮЧ [--model=ID_модели] [--api_url=URL] [--filter=подстрока]
+```
+
 ## Примечания
-- По умолчанию парсится страница https://techcrunch.com/2025/07/15/ (можно изменить в коде).
+- По умолчанию парсятся страницы https://techcrunch.com/2025/07/15/ и https://techcrunch.com/2025/07/16/ (можно изменить в коде).
 - Все результаты сохраняются в файл базы данных `news.db`.
 - Для корректной работы требуется интернет-соединение.
+- Для работы с Telegram и OpenRouter необходимы переменные окружения в `.env`.
 
 ---
 

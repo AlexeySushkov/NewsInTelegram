@@ -25,6 +25,10 @@ def init_db():
     conn.close()
 
 
+def split_message(text, max_length=4096):
+    return [text[i:i+max_length] for i in range(0, len(text), max_length)]
+
+
 async def send_to_telegram(text: str):
     load_dotenv()
     token = os.getenv('TELEGRAM_TOKEN')
@@ -34,7 +38,8 @@ async def send_to_telegram(text: str):
         return
     bot = Bot(token=token)
     try:
-        await bot.send_message(chat_id=channel_id, text=text)
+        for part in split_message(text):
+            await bot.send_message(chat_id=channel_id, text=part)
         print('Новость отправлена в Telegram')
     except Exception as e:
         print(f'Ошибка при отправке в Telegram: {e}')
