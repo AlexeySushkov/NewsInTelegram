@@ -150,4 +150,4 @@ Desktop.ini
 *.sl3
 *.db-journal
 *.sqlite-journal 
-.env
+#.env
